@@ -1,0 +1,67 @@
+body {
+  font-family: sans-serif;
+}
+
+#app {
+  height: 100%;
+  width: 100%;
+}
+
+.modal-container {
+  display: none;
+  place-items: center;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.modal-container .modal {
+  height: 50%;
+  width: 50%;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  animation-name: fadeIn;
+  animation-duration: 0.4s;
+}
+
+.modal .modal__header {
+  height: 50px;
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.modal__header .header__left {
+  display: flex;
+  flex: auto;
+}
+
+.modal__header .header__cross {
+  display: flex;
+  height: 16px;
+  width: 16px;
+  margin-right: 5px;
+  cursor: pointer;
+}
+
+.modal .modal__content {
+  display: flex;
+  flex: auto;
+  align-items: center;
+  justify-content: center;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
